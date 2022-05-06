@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
-  //One way to use state
-
+const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -44,7 +42,7 @@ const ExpenseForm = () => {
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
-    console.log(expensesData);
+    props.onSaveExpenseData(expensesData);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
@@ -67,7 +65,7 @@ const ExpenseForm = () => {
           <input
             type="number"
             min="10"
-            step="5"
+            step="1"
             value={enteredAmount}
             onChange={amountChangeHandler}
           />
