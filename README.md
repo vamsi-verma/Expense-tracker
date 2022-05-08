@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Brief on what is done in this project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Expense tracker project where user can add the expenses accroding to the date and year (2019,2020,2021,2022) and can track the expenses.
+Currently this project is not connected to any datatbase but in future will work on that.
+
+## Thank you for using it
 
 ## Available Scripts
 
